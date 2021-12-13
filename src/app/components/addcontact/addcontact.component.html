@@ -1,0 +1,109 @@
+
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Contacts</a>
+  
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button (click)="clickAdd()"  type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Add
+        </button>
+      </form>
+    </div>
+  </nav>
+  
+  
+  
+  <div>
+    <table class="table caption-top mt-3">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Adress</th>
+          <th scope="col">DOB</th>
+          <th scope="col">Email</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let row of contactData">
+              <td>{{row.id}}</td>
+              <td>{{row.firstName}}</td>
+              <td>{{row.lastName}}</td>
+              <td>{{row.contact}}</td>
+              <td>{{row.address}}</td>
+              <td>{{row.dob}}</td>
+              <td>{{row.email}}</td>
+
+              <td>
+                  
+                  <button (click)="onEdit(row)" class="btn btn-info mx-2"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                  <button (click)="deleteContact(row)" class="btn btn-danger mx-3" >Delete</button>
+              </td>
+          </tr>
+  
+      </tbody>
+    </table>
+  
+  </div>
+  
+  <!-- modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Contact</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <form [formGroup]="formValue">
+              <div class="mb-3">
+                <label for="exampleInputFN" class="form-label">First Name</label>
+                <input type="text" formControlName="firstName" class="form-control" id="" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputLN" class="form-label">Last Name </label>
+                <input type="text" formControlName="lastName" class="form-control" id="" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputContact" class="form-label">Contact </label>
+                <input type="number" formControlName="contact" class="form-control" id="" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputAdress" class="form-label">Address</label>
+                <input type="text" formControlName="address" class="form-control" id="" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputdob" class="form-label">DOB</label>
+                <input type="date" formControlName="dob" class="form-control" id="" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" formControlName="email" class="form-control" id="" aria-describedby="emailHelp">
+                
+              </div>
+              
+              
+              
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" (click)="postContactDetails()" *ngIf="showAdd" class="btn btn-primary">Add</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateContactDetails()" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>

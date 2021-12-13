@@ -1,0 +1,62 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "vv",
+      "lastName": "vv",
+      "contact": "vv",
+      "address": "vv",
+      "dob": "vv",
+      "email": "@yaho"
+    },
+    {
+      "id": 2,
+      "firstName": "34",
+      "lastName": "56",
+      "contact": "32",
+      "address": "66",
+      "dob": "77",
+      "email": "@g"
+    },
+    {
+      "id": 3,
+      "firstName": "vv",
+      "lastName": "vv",
+      "contact": "03368161240",
+      "address": "kili",
+      "dob": "test",
+      "email": "test"
+    },
+    {
+      "id": 4,
+      "firstName": "nn",
+      "lastName": "muzamol",
+      "contact": "vv",
+      "address": "nn",
+      "dob": "rr",
+      "email": "bb"
+    },
+    {
+      "id": 5,
+      "firstName": "Muzamil",
+      "lastName": "Ahmed ",
+      "contact": 336181240,
+      "address": "kili alam khan",
+      "dob": "1998-03-08",
+      "email": "gh"
+    },
+    {
+      "id": 6,
+      "firstName": null,
+      "lastName": null,
+      "contact": null,
+      "address": null,
+      "dob": null,
+      "email": "email"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
