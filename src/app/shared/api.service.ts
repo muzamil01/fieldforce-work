@@ -9,14 +9,14 @@ export class ApiService {
 
   constructor(private http : HttpClient) { }
   postContact(data:any){
-    return this.http.post<any>("http://localhost:3000/posts/",data)
+    return this.http.post<any>("https://contact-book-8df6f-default-rtdb.firebaseio.com/fieldforce.json",data)
     .pipe(map((res:any)=>{
       return res;
     }))
     
   }
    getContact(){
-    return this.http.get<any>("http://localhost:3000/posts/")
+    return this.http.get<any>("https://contact-book-8df6f-default-rtdb.firebaseio.com/fieldforce.json")
     .pipe(map((res:any)=>{
       return res;
     }))

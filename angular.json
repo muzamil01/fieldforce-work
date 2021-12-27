@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "contact-book-system:build:production",
+            "firebaseProject": "contact-book-8df6f",
+            "firebaseHostingSite": "contact-book-8df6f"
+          }
         }
       }
     }

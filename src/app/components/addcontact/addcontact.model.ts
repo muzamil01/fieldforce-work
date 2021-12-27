@@ -4,8 +4,10 @@ export class contactModel{
     firstName:string="";
     lastName:string="";
     contact:string="";
+    
     address:string="";
     dob:string="";
     email:string="";
+  
 
 }

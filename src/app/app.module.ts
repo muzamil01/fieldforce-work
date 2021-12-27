@@ -5,10 +5,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AddcontactComponent } from './components/addcontact/addcontact.component';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+
+
+
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
     AddcontactComponent
   ],
   imports: [
@@ -21,3 +31,5 @@ import { AddcontactComponent } from './components/addcontact/addcontact.componen
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

@@ -2,39 +2,12 @@
   "posts": [
     {
       "id": 1,
-      "firstName": "Muzamil",
-      "lastName": "Ahmed",
-      "contact": 3368161240,
+      "firstName": "muzamil",
+      "lastName": "ahmed ",
+      "contact": "03327872369",
       "address": "kili alam Khan",
-      "dob": "2021-12-24",
-      "email": "@gmail"
-    },
-    {
-      "id": 2,
-      "firstName": "ilyas",
-      "lastName": "kasi",
-      "contact": 8765433212,
-      "address": "shabbo town",
-      "dob": "9/9/1999",
-      "email": "@yahoo.com"
-    },
-    {
-      "id": 3,
-      "firstName": "test",
-      "lastName": "tet",
-      "contact": null,
-      "address": "kili alam khan",
-      "dob": "03081999",
-      "email": "@yahoo"
-    },
-    {
-      "id": 4,
-      "firstName": "Muhammad ",
-      "lastName": "Zulkifel",
-      "contact": 923334108899,
-      "address": "18",
-      "dob": "2021-12-22",
-      "email": "zulkifel@gmail.com"
+      "dob": "2021-12-16",
+      "email": "muzamil@getfieldforce.com"
     }
   ],
   "comments": [],
